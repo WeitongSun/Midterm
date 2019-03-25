@@ -28,7 +28,8 @@ public class Cuboid extends Rectangle  {
 	}
 	
 	public double area() {
-		return (2*(this.getiLength() * this.getiWidth())+ 2*(this.getiLength()*this.iDepth) + 2*(this.getiWidth()* this.iDepth));
+		double eq = (2*(this.getiLength() * this.getiWidth())+ 2*(this.getiLength()*this.iDepth) + 2*(this.getiWidth()* this.iDepth));
+		return eq;
 	}
 	
 	public double perimeter() throws UnsupportedOperationException{

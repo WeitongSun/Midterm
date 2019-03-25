@@ -33,7 +33,8 @@ public class Rectangle extends Shape {
 	}
 	
 	public double area() {
-		return this.iLength*this.iWidth;
+		double area = this.iLength*this.iWidth;
+		return area;
 	}
 	
 	public double perimeter() throws UnsupportedOperationException {
