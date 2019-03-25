@@ -36,9 +36,24 @@ public class Cuboid extends Rectangle  {
 		throw new UnsupportedOperationException("Invalid");
 	}
 	
-	public int compareTo(Object other) {
-		return (Integer) null;
-	}
+	public int compareTo(Cuboid other){
+	    SortByArea a = new SortByArea();
+	    SortByVolume v = new SortByVolume();
+	    if(a.compare(this, other) !=0) {
+	    	return a.compare(this, other);
+	    }
+	    else {
+	    	return v.compare(this, other);
+	    		
+	    	}
+	    	
+	    }
+	    	
+	    
+	
+	
+	
+	
 
 }
 

@@ -1,10 +1,10 @@
 package pkgShape;
 
-public class Rectangle extends Shape{
+public class Rectangle extends Shape {
 	private int iWidth;
 	private int iLength;
 	
-	public Rectangle(int width, int length)throws IllegalArgumentException {
+	public Rectangle(int width, int length) {
 		
 		this.iWidth = width;
 		this.iLength = length;
@@ -40,8 +40,17 @@ public class Rectangle extends Shape{
 		return 2*(this.iLength+this.iWidth);
 	}
 	
-	public int compareTo(Object other) {
-		return (Integer) null;
+	@SuppressWarnings("null")
+	public int compareTo(Rectangle other) {	
+		if (this.area() > other.area()) {
+			return 1;
+		}
+		else if (this.area() < other.area()) {
+			return -1;
+		}
+		else {
+			return 0;
+		}
 	}
 
 
