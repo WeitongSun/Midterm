@@ -70,19 +70,39 @@ public class ShapeTest {
 	 }
 	
 	//TestArea
-	/*
+	
 	@Test
 	public void testAreaRec() {
 		Rectangle recArea = new Rectangle(30,20);
-		assertEquals(600, recArea.area());
+		assertEquals(600, (int)recArea.area());
 	
 	}
 
 	@Test
-	public void testarea() {
+	public void testAreaCu() {
 	  Cuboid b = new Cuboid(2,2,2);
-	  assertEquals(24,b.area());
-	 }*/
+	  assertEquals(24,(int)b.area());
+	 }
+	
+	//TestPerimeter
+	@Test 
+	public void testPerimeterRec() {
+		Rectangle rec = new Rectangle(10, 20);
+		assertEquals(60,(int)rec.perimeter());
+	}
+	
+	@Test
+	public void testPerimeterCu() {
+		String thrown = "";
+		Cuboid c = new Cuboid(1,2,3);
+		try {
+			c.perimeter();
+		}
+		catch(UnsupportedOperationException e) {
+			thrown = "Invalid";
+		}
+	assertEquals("Invalid", thrown);
+	}
 
 	
 	 
