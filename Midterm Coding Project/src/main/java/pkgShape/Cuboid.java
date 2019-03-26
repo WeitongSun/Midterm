@@ -29,6 +29,7 @@ public class Cuboid extends Rectangle  {
 	
 	public double area() {
 		double eq = (2*(this.getiLength() * this.getiWidth())+ 2*(this.getiLength()*this.iDepth) + 2*(this.getiWidth()* this.iDepth));
+		
 		return eq;
 	}
 	

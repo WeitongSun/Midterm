@@ -2,6 +2,9 @@ package pkgTestShape;
 
 import static org.junit.Assert.assertEquals;
 
+import java.util.ArrayList;
+import java.util.concurrent.ThreadLocalRandom;
+
 import org.junit.Test;
 
 import pkgShape.Cuboid;
@@ -70,7 +73,6 @@ public class ShapeTest {
 	 }
 	
 	//TestArea
-	
 	@Test
 	public void testAreaRec() {
 		Rectangle recArea = new Rectangle(30,20);
@@ -103,6 +105,35 @@ public class ShapeTest {
 		}
 	assertEquals("Invalid", thrown);
 	}
+	
+	
+	//testComparaTo
+	@Test
+	public void testRec() {
+		ArrayList<Rectangle> recs =new ArrayList<Rectangle>();
+	
+		for(int i = 0; i < 10; i++) {
+			int iWidth = ThreadLocalRandom.current().nextInt(1,10+1);
+			int iLength = ThreadLocalRandom.current().nextInt(1,10+1);
+			
+			recs.add(new Rectangle(iWidth, iLength));
+		}
+	}
+	
+	@Test
+	public void testCuboid() {
+		ArrayList<Cuboid> cu =new ArrayList<Cuboid>();
+	
+		for(int i = 0; i < 10; i++) {
+			int iWidth = ThreadLocalRandom.current().nextInt(1,10+1);
+			int iLength = ThreadLocalRandom.current().nextInt(1,10+1);
+			int iDepth = ThreadLocalRandom.current().nextInt(1,10+1);
+			
+			cu.add(new Cuboid(iWidth, iLength, iDepth));
+		}
+	}
+	            
+	
 
 	
 	 
