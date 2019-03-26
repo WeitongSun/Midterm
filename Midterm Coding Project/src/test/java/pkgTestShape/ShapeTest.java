@@ -33,10 +33,12 @@ public class ShapeTest {
 	public void whenExceptionThrown_thenExpectationSatisfied() {
 		Rectangle R = new Rectangle(-10, 20);
 	}
+	
 	@Test(expected = IllegalArgumentException.class)
 	public void whenExceptionThrown_thenExpectationSatisfied_2() {
 		Rectangle e = new Rectangle(10, -20);
 	}
+	
 	@Test(expected = IllegalArgumentException.class)
 	public void whenExceptionThrown_thenExpectationSatisfied_3() {
 		Rectangle c = new Rectangle(-10, -20);
@@ -109,7 +111,7 @@ public class ShapeTest {
 	
 	//testComparaTo
 	@Test
-	public void testRec() {
+	public void testRecCom() {
 		ArrayList<Rectangle> recs =new ArrayList<Rectangle>();
 	
 		for(int i = 0; i < 10; i++) {
@@ -121,7 +123,7 @@ public class ShapeTest {
 	}
 	
 	@Test
-	public void testCuboid() {
+	public void testCuboidCom() {
 		ArrayList<Cuboid> cu =new ArrayList<Cuboid>();
 	
 		for(int i = 0; i < 10; i++) {
@@ -133,6 +135,7 @@ public class ShapeTest {
 		}
 	}
 	            
+	
 	
 
 	
